@@ -337,7 +337,8 @@
            ========================================================================== */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            /* Forçando a quebra de 2 colunas no desktop */
+            grid-template-columns: repeat(2, 1fr);
             gap: 35px;
         }
 
@@ -464,8 +465,8 @@
 
         /* Responsive Mobile */
         @media (max-width: 768px) {
-            .grid-2col {
-                grid-template-columns: 1fr;
+            .grid-2col, .projects-grid {
+                grid-template-columns: 1fr; /* Projetos caem para 1 coluna no celular */
             }
 
             .hero-title {
@@ -709,7 +710,53 @@
                         </div>
                     </div>
                 </div>
+                <!-- Projeto 3 (Modelo - Substitua pelos seus dados) -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="covid.jpg" alt="Projeto 3">
+                    </div>
+                    <div class="project-body">
+                        <h3>Título do Projeto 3</h3>
+                        <p>Breve descrição sobre o terceiro projeto, as ferramentas utilizadas e os resultados obtidos após a análise dos dados.</p>
+                        <div class="tag-container">
+                            <span class="tag">Ferramenta 1</span>
+                            <span class="tag">Ferramenta 2</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="#" target="_blank" class="btn-retro" style="padding: 8px 16px; font-size: 0.85rem;">
+                                <i class="fa-brands fa-github"></i> Ver Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Projeto 4 (Modelo - Substitua pelos seus dados) -->
+                <div class="project-card">
+                    <div class="project-img">
+                        <img src="vendas.png" alt="Projeto 4">
+                    </div>
+                    <div class="project-body">
+                        <h3>Título do Projeto 4</h3>
+                        <p>Breve descrição sobre o quarto projeto, o impacto das visualizações e as conclusões principais tiradas do estudo.</p>
+                        <div class="tag-container">
+                            <span class="tag">Ferramenta 1</span>
+                            <span class="tag">Ferramenta 2</span>
+                        </div>
+                        <div class="project-footer">
+                            <a href="#" target="_blank" class="btn-retro" style="padding: 8px 16px; font-size: 0.85rem;">
+                                <i class="fa-solid fa-chart-column"></i> Ver Dashboard
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <!-- Botão Ver Mais Projetos -->
+            <div style="text-align: center; margin-top: 50px;">
+                <a href="projetos.html" class="btn-retro">
+                    <i class="fa-solid fa-arrow-right"></i> Veja mais
+                </a>
+            </div>
+
         </div>
     </section>
 
